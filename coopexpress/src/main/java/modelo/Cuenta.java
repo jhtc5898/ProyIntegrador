@@ -30,6 +30,7 @@ public class Cuenta {
     @JoinColumn(name="usuario_codigo", nullable=false)
 	private Usuario usuario;
 	
+	
 	public int getCodigo_cuenta() {
 		return codigo_cuenta;
 	}
