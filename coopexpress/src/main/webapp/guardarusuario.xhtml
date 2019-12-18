@@ -17,6 +17,10 @@
 			<h:outputLabel for="txtNombre" value="Nombre" />
 			<h:inputText id="txtNombre" value="#{gestionUsuariosBean.usuario.nombre}" />
 			<h:message for="txtNombre" />
+			
+			<h:outputLabel for="txtApellido" value="Apellido" />
+			<h:inputText id="txtApellido" value="#{gestionUsuariosBean.usuario.apellido}" />
+			<h:message for="txtApellido" />
 
 			<h:outputLabel for="txtTelefono" value="Telefono" />
 			<h:inputText id="txtTelefono" value="#{gestionUsuariosBean.usuario.telefono}" />
@@ -25,6 +29,10 @@
 			<h:outputLabel for="txtDireccion" value="Direccion" />
 			<h:inputText id="txtDireccion" value="#{gestionUsuariosBean.usuario.direccion}" />
 			<h:message for="txtDireccion" />
+			
+			<h:outputLabel for="txtCorreo" value="Correo" />
+			<h:inputText id="txtCorreo" value="#{gestionUsuariosBean.usuario.correo}" />
+			<h:message for="txtCorreo" />
 
 			<h:outputText value="" />
 			<h:commandButton action="#{gestionUsuariosBean.guardarUsuario()}" value="Guardar" />
