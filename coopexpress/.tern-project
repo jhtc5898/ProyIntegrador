@@ -11,6 +11,10 @@
     }
   },
   "libs": [
+<<<<<<< HEAD
+=======
+    "ecma5",
+>>>>>>> branch 'master' of https://github.com/jhtc5898/ProyIntegrador.git
     "browser"
   ]
 }
