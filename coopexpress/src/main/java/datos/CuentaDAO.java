@@ -41,10 +41,10 @@ public class CuentaDAO {
 		return cuentas;
 	}
 	
-	public Cuenta getCuentaNombre(int numeroCuenta){
+	public Cuenta getCuentaNumero(String numeroCuenta){
 		String jpql = "SELECT c FROM Cuenta c WHERE numero_cuenta LIKE ?1";
 		Query q = em.createQuery(jpql,Cuenta.class);
-		
+		q.setParameter(1, "%" + numeroCuenta + "%");
 		Cuenta c = (Cuenta) q.getSingleResult();
 		
 		return c;

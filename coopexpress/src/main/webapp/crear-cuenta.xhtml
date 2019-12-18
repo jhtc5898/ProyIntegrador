@@ -12,6 +12,28 @@
 
 	<h:form>
 		
+		<h:panelGrid columns="3">	
+			<h:outputLabel for="txtNumeroCuenta" value="Numero Cuenta" />
+			<h:inputText id="txtNumeroCuenta"  />
+			<h:message for="txtNumeroCuenta"/>
+			
+			<h:outputLabel for="txtSaldoCuenta" value="Saldo Cuenta" />
+			<h:inputText id="txtSaldoCuenta"  />
+			<h:message for="txtSaldoCuenta"/>
+			
+			<h:outputText value="" />
+			
+			<h:outputLabel value="Usuario" />
+			<h:dataTable value="" var="usuario">
+				<h:column>
+					<f:facet name="header">Cedula Usuario</f:facet>
+					<h:inputText value="" />
+				</h:column>
+			</h:dataTable>
+		</h:panelGrid>
+		<h:outputText value=""/>
+			<h:commandButton  value="Guardar" />
+		
 	</h:form>
 
 </body> 

@@ -1,8 +1,12 @@
 package modelo;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Usuario {
@@ -26,6 +30,9 @@ public class Usuario {
 	@Column(name = "usuario_correo")
 	private String correo;
 
+	@OneToMany(mappedBy="usuario", cascade = CascadeType.ALL)
+    private List<Cuenta> cuentas;
+	
 	public String getCedula() {
 		return cedula;
 	}

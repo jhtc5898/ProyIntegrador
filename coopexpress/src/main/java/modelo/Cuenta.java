@@ -2,9 +2,14 @@ package modelo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 public class Cuenta {
@@ -15,11 +20,16 @@ public class Cuenta {
 	private int codigo_cuenta;
 	
 	@Column(name = "numero_cuenta")
+	//@NotEmpty
 	private String numero_cuenta;
 	
 	@Column(name = "saldo_cuenta")
 	private double saldo_cuenta;
 
+	@ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="usuario_codigo", nullable=false)
+	private Usuario usuario;
+	
 	public int getCodigo_cuenta() {
 		return codigo_cuenta;
 	}
@@ -44,13 +54,20 @@ public class Cuenta {
 		this.saldo_cuenta = saldo_cuenta;
 	}
 
+	
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+
 	@Override
 	public String toString() {
 		return "Cuenta [codigo_cuenta=" + codigo_cuenta + ", numero_cuenta=" + numero_cuenta + ", saldo_cuenta="
-				+ saldo_cuenta + "]";
+				+ saldo_cuenta + ", usuario=" + usuario + "]";
 	}
-	
-	
-	
+
 
 }
