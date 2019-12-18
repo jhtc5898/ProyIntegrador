@@ -25,9 +25,9 @@
 			<h:dataTable value="#{gestionCuentasBean.cuenta.usuario}" var="usuario">
 				<h:column>
 					<f:facet name="header">Cedula Usuario</f:facet>
-					<h:inputText value="#{usuario.cedula}"/>
 				</h:column>
 			</h:dataTable>
+			
 		</h:panelGrid>
 		
 		<h:commandButton  value="Guardar" action="#{gestionCuentasBean.guardar()}" />
