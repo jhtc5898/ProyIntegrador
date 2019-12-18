@@ -29,6 +29,9 @@ public class GestionCuentasBean {
 		cuenta.setUsuario(new Usuario());
 		
 	}
+	
+	
+	
 
 	public Cuenta getCuenta() {
 		return cuenta;
