@@ -7,7 +7,6 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
-import modelo.Cuenta;
 import modelo.TipoCuenta;
 
 @Stateless
@@ -15,7 +14,6 @@ public class TipoCuentaDAO {
 
 	@Inject
 	private EntityManager em;
-	
 	
 	public void insertarTipoCuenta(TipoCuenta tipocuenta  ) {
 		em.persist(tipocuenta);
