@@ -30,7 +30,19 @@ public class Cuenta {
     @JoinColumn(name="usuario_codigo", nullable=false)
 	private Usuario usuario;
 	
+	@ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="tipo_cuenta_codigo", nullable=false)
+	private Tipo_Cuenta tipo_cuenta;
 	
+	
+	public Tipo_Cuenta getTipo_cuenta() {
+		return tipo_cuenta;
+	}
+
+	public void setTipo_cuenta(Tipo_Cuenta tipo_cuenta) {
+		this.tipo_cuenta = tipo_cuenta;
+	}
+
 	public int getCodigo_cuenta() {
 		return codigo_cuenta;
 	}
@@ -67,8 +79,10 @@ public class Cuenta {
 	@Override
 	public String toString() {
 		return "Cuenta [codigo_cuenta=" + codigo_cuenta + ", numero_cuenta=" + numero_cuenta + ", saldo_cuenta="
-				+ saldo_cuenta + ", usuario=" + usuario + "]";
+				+ saldo_cuenta + ", usuario=" + usuario + ", tipo_cuenta=" + tipo_cuenta + "]";
 	}
+
+	
 
 
 }
