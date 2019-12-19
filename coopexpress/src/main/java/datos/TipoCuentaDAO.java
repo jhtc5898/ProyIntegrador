@@ -7,7 +7,7 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
-import modelo.TipoCuenta;
+import modelo.Tipo_Cuenta;
 
 @Stateless
 public class TipoCuentaDAO {
@@ -15,26 +15,26 @@ public class TipoCuentaDAO {
 	@Inject
 	private EntityManager em;
 	
-	public void insertarTipoCuenta(TipoCuenta tipocuenta  ) {
-		em.persist(tipocuenta);
+	public void insertarTipoCuenta(Tipo_Cuenta tipo_cuenta  ) {
+		em.persist(tipo_cuenta);
 	}
 	
-	public void update(TipoCuenta tipocuenta) {
-		em.merge(tipocuenta);
+	public void update(Tipo_Cuenta tipo_cuenta) {
+		em.merge(tipo_cuenta);
 	}
 	
 	public void remove(int codigo) {
 		em.remove(this.read(codigo));
 	}
 	
-	public TipoCuenta read(int codigo) {
-		return em.find(TipoCuenta.class, codigo);
+	public Tipo_Cuenta read(int codigo) {
+		return em.find(Tipo_Cuenta.class, codigo);
 	}
-	public List<TipoCuenta> getTipoCuentas(){
-		String jpql = "SELECT l FROM TipoCuenta l";
-		Query q = em.createQuery(jpql, TipoCuenta.class);
+	public List<Tipo_Cuenta> getTipoCuentas(){
+		String jpql = "SELECT l FROM tipo_cuenta l";
+		Query q = em.createQuery(jpql, Tipo_Cuenta.class);
 		
-		List<TipoCuenta> tipocuentas = q.getResultList();
+		List<Tipo_Cuenta> tipocuentas = q.getResultList();
 		
 		return tipocuentas;
 	}

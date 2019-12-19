@@ -9,7 +9,7 @@ import javax.persistence.Id;
 
 
 @Entity
-public class TipoCuenta {
+public class Tipo_Cuenta {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)

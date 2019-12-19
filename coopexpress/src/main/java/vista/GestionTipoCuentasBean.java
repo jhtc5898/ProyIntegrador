@@ -6,7 +6,7 @@ import javax.faces.bean.SessionScoped;
 import javax.inject.Inject;
 
 
-import modelo.TipoCuenta;
+import modelo.Tipo_Cuenta;
 
 
 import negocio.GestionTipoCuentas;
@@ -18,10 +18,10 @@ public class GestionTipoCuentasBean {
 	@Inject
 	private GestionTipoCuentas gtc;
 	
-	private TipoCuenta tipocuenta = new TipoCuenta();
+	private Tipo_Cuenta tipo_cuenta = new Tipo_Cuenta();
 	
 	public String guardar() {
-		gtc.guardar(tipocuenta);
+		gtc.guardar(tipo_cuenta);
 		return null;
 	}
 
@@ -33,12 +33,12 @@ public class GestionTipoCuentasBean {
 		this.gtc = gtc;
 	}
 
-	public TipoCuenta getTipocuenta() {
-		return tipocuenta;
+	public Tipo_Cuenta getTipocuenta() {
+		return tipo_cuenta;
 	}
 
-	public void setTipocuenta(TipoCuenta tipocuenta) {
-		this.tipocuenta = tipocuenta;
+	public void setTipocuenta(Tipo_Cuenta tipocuenta) {
+		this.tipo_cuenta = tipocuenta;
 	}
 	
 
