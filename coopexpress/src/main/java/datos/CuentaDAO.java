@@ -23,6 +23,7 @@ public class CuentaDAO {
 		em.merge(cuenta);
 		
 	}
+	//eliminar
 	
 	public void remove(int codigo) {
 		Cuenta cuenta  = this.read(codigo);

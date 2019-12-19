@@ -30,7 +30,9 @@ public class GestionCuentasBean {
 		
 	}
 	
-	
+	public void listado() {
+		
+	}
 	
 
 	public Cuenta getCuenta() {

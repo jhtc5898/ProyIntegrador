@@ -26,7 +26,7 @@ public class GestionCuentas {
 		cuentadDAO.remove(codigo);
 	}
 	
-	public List<Cuenta> getLibros(){
+	public List<Cuenta> getCuentas(){
 		return cuentadDAO.getCuentas();
 	}
 	public Cuenta obtenerCuentaNumero(String numeroCuenta) {

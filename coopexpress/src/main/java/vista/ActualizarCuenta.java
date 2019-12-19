@@ -60,6 +60,9 @@ public class ActualizarCuenta {
 		this.cuentas = cuentas;
 	}
 	
+	public void listadoCuentas() {
+		cuentas = gc.getCuentas();
+	}
 	
 
 }
